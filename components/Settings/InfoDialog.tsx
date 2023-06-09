@@ -102,7 +102,7 @@ export const InfoDialog: FC<Props> = ({ open, onClose }) => {
             </div>
 
             <ul className="flex justify-center space-x-4">
-              <li><a href="https://github.com/AmTriiX" target={'_blank'} className="flex items-center justify-center h-10 w-10 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800"><IconBrandGithubFilled size={18} className="text-gray-600 dark:text-white" /></a></li>
+              <li><a href="https://github.com/Rzayy" target={'_blank'} className="flex items-center justify-center h-10 w-10 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800"><IconBrandGithubFilled size={18} className="text-gray-600 dark:text-white" /></a></li>
               <li><a href="https://instagram.com/edoardo.hb" target={'_blank'} className="flex items-center justify-center h-10 w-10 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800"><IconBrandInstagram size={18} className="text-gray-600 dark:text-white" /></a></li>
               <li><a href="https://twitter.com/AmTriiX" target={'_blank'} className="flex items-center justify-center h-10 w-10 rounded-md bg-gray-200 hover:bg-gray-300 dark:bg-neutral-900 dark:hover:bg-neutral-800"><IconBrandTwitterFilled size={18} className="text-gray-600 dark:text-white" /></a></li>
             </ul>
