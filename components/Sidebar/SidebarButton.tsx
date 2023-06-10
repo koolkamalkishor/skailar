@@ -35,5 +35,5 @@ export const SidebarLink: FC<LinkProps> = ({ text, icon, href, target }) => {
       <div>{icon}</div>
       <span>{text}</span>
     </a>
-  )
-}
+  );
+};

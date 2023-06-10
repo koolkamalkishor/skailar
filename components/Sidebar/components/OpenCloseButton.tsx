@@ -1,4 +1,7 @@
-import { TbLayoutSidebarLeftCollapse as IconArrowBarLeft, TbLayoutSidebarLeftExpand as IconArrowBarRight } from 'react-icons/tb'
+import {
+  TbLayoutSidebarLeftCollapse as IconArrowBarLeft,
+  TbLayoutSidebarLeftExpand as IconArrowBarRight,
+} from 'react-icons/tb';
 
 interface Props {
   onClick: any;
@@ -16,7 +19,11 @@ export const CloseSidebarButton = ({ onClick, side }: Props) => {
         } sm:h-8 sm:w-8 sm:text-neutral-700`}
         onClick={onClick}
       >
-        {side === 'right' ? <IconArrowBarRight size={28} /> : <IconArrowBarLeft size={28} />}
+        {side === 'right' ? (
+          <IconArrowBarRight size={28} />
+        ) : (
+          <IconArrowBarLeft size={28} />
+        )}
       </button>
       <div
         onClick={onClick}
@@ -36,7 +43,11 @@ export const OpenSidebarButton = ({ onClick, side }: Props) => {
       } sm:h-8 sm:w-8 sm:text-neutral-700`}
       onClick={onClick}
     >
-      {side === 'right' ? <IconArrowBarLeft size={28} /> : <IconArrowBarRight size={28} />}
+      {side === 'right' ? (
+        <IconArrowBarLeft size={28} />
+      ) : (
+        <IconArrowBarRight size={28} />
+      )}
     </button>
   );
 };

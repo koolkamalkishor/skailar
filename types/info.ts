@@ -1,4 +1,3 @@
 export interface Info {
-    theme: 'light' | 'dark';
-  }
-  
+  theme: 'light' | 'dark';
+}

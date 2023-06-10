@@ -17,7 +17,6 @@ Expect frequent improvements.
 - [ ] Continue Generate
 - [ ] Bots
 
-
 Build locally:
 
 ```shell
@@ -97,6 +96,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 + New Socials and his design
 + React Icons
 + Contact Informations
++ Authentication with Google, GitHub, Discord and Twitch
++ Protected Index Route
 
 - Tabler Icons
 ```

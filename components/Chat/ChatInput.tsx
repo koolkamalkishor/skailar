@@ -1,11 +1,4 @@
-import {
-  IconArrowDown,
-  IconPlayerStop,
-  IconRepeat,
-} from '@tabler/icons-react';
-import {
-  IoMdSend as IconSend
-} from 'react-icons/io'
+import { IconArrowDown, IconPlayerStop, IconRepeat } from '@tabler/icons-react';
 import {
   KeyboardEvent,
   MutableRefObject,
@@ -15,6 +8,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import { IoMdSend as IconSend } from 'react-icons/io';
 
 import { useTranslation } from 'next-i18next';
 

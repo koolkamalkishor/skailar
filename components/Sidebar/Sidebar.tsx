@@ -1,7 +1,7 @@
 import { IconFolderPlus, IconMistOff } from '@tabler/icons-react';
-import { BsPlus as IconPlus } from 'react-icons/bs'
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BsPlus as IconPlus } from 'react-icons/bs';
 
 import {
   CloseSidebarButton,

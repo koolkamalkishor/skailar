@@ -1,5 +1,4 @@
 import { IconSettings } from '@tabler/icons-react';
-import { AiOutlineDelete as IconClearAll } from 'react-icons/ai'
 import {
   MutableRefObject,
   memo,
@@ -10,6 +9,7 @@ import {
   useState,
 } from 'react';
 import toast from 'react-hot-toast';
+import { AiOutlineDelete as IconClearAll } from 'react-icons/ai';
 
 import { useTranslation } from 'next-i18next';
 
@@ -427,7 +427,6 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                   >
                     <IconClearAll size={18} />
                   </button>
-                  
                 </div>
                 {showSettings && (
                   <div className="flex flex-col space-y-10 md:mx-auto md:max-w-xl md:gap-6 md:py-3 md:pt-6 lg:max-w-2xl lg:px-0 xl:max-w-3xl">

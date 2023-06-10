@@ -1,3 +1,4 @@
+import { SessionProvider } from 'next-auth/react';
 import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
@@ -9,14 +10,22 @@ import '@/styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-function App({ Component, pageProps }: AppProps<{}>) {
+type MyAppProps = AppProps & {
+  pageProps: {
+    session?: any;
+  };
+};
+
+function App({ Component, pageProps }: MyAppProps) {
   const queryClient = new QueryClient();
 
   return (
     <div className={inter.className}>
       <Toaster />
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <SessionProvider session={pageProps.session}>
+          <Component {...pageProps} />
+        </SessionProvider>
       </QueryClientProvider>
     </div>
   );

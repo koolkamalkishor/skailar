@@ -1,12 +1,19 @@
-import { IconFileExport, IconSettings, IconInfoCircle } from '@tabler/icons-react';
+import {
+  IconFileExport,
+  IconInfoCircle,
+  IconSettings,
+} from '@tabler/icons-react';
+import { signOut, useSession } from 'next-auth/react';
 import { useContext, useState } from 'react';
+import { BiLogOut as IconLogout } from 'react-icons/bi';
 
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 import HomeContext from '@/pages/api/home/home.context';
 
-import { SettingDialog } from '@/components/Settings/SettingDialog';
 import { InfoDialog } from '@/components/Settings/InfoDialog';
+import { SettingDialog } from '@/components/Settings/SettingDialog';
 
 import { Import } from '../../Settings/Import';
 import { Key } from '../../Settings/Key';
@@ -38,6 +45,18 @@ export const ChatbarSettings = () => {
     handleApiKeyChange,
   } = useContext(ChatbarContext);
 
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await signOut();
+    router.push('/');
+  };
+
+  if (status === 'loading') {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className="flex flex-col items-center space-y-1 border-t border-white/20 pt-1 text-sm">
       {conversations.length > 0 ? (
@@ -58,14 +77,20 @@ export const ChatbarSettings = () => {
         onClick={() => setIsSettingDialog(true)}
       />
 
+      <SidebarButton
+        text={t('Informations')}
+        icon={<IconInfoCircle size={18} />}
+        onClick={() => setIsInfoDialog(true)}
+      />
+
       <div className="w-full text-left rounded-lg border border-neutral-200 border-dashed hover:border-solid bg-transparent text-neutral-900 dark:border-neutral-600 dark:text-white">
         <SidebarButton
-          text={t('Informations')}
-          icon={<IconInfoCircle size={18} />}
-          onClick={() => setIsInfoDialog(true)}
+          text={t('Logout')}
+          icon={<IconLogout size={18} />}
+          onClick={handleLogout}
         />
       </div>
-      
+
       {!serverSideApiKeyIsSet ? (
         <Key apiKey={apiKey} onApiKeyChange={handleApiKeyChange} />
       ) : null}

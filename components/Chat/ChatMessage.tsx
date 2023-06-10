@@ -5,8 +5,8 @@ import {
   IconTrash,
   IconUser,
 } from '@tabler/icons-react';
-import { BsRobot as IconRobot } from 'react-icons/bs'
 import { FC, memo, useContext, useEffect, useRef, useState } from 'react';
+import { BsRobot as IconRobot } from 'react-icons/bs';
 
 import { useTranslation } from 'next-i18next';
 
