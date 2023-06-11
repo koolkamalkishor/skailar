@@ -4,7 +4,6 @@ import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import TwitchProvider from 'next-auth/providers/twitch';
 
-
 export const authConfig: NextAuthOptions = {
   providers: [
     TwitchProvider({
