@@ -12,9 +12,10 @@ export const Login = (props: CredentialsFormProps) => {
     const router = useRouter();
     const [error, setError] = useState<string | null>(null)
 
-    const handleSumbit = async (e) => {
+    const handleSumbit = async (e: React.FormEvent) => {
         e.preventDefault()
-        const data = new FormData(e.currentTarget)
+        const form = e.currentTarget as HTMLFormElement;
+        const data = new FormData(form)
 
         const signInResponse = await signIn("credentials", {
             email: data.get('email'),
