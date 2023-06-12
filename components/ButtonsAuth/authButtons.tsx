@@ -58,7 +58,7 @@ export function GoogleSignInButton() {
           </>
         )}
       </button>
-      <div className="m-5 w-96">
+      <div className="sm:hidden m-5 w-96">
         <center>
           <button onClick={handleClick} className="flex sm:hidden">
             {loading ? (
